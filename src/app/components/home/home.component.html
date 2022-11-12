@@ -1,0 +1,38 @@
+<mat-card >
+
+    <!-- <div >
+
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+          <div ngxSlickItem *ngFor="let image of images" class="slide">
+            <img src="{{ image.img }}" width="100%">
+          </div>
+        </ngx-slick-carousel>
+    </div> -->
+    <div class="card-container" >
+
+
+    <div class="card" *ngFor="let data of allPackagesList">
+      <ul class="ul">
+        <li>
+          <i class="bx bx-drink"></i>
+        </li>
+        <li>
+          <i class="bx bx-film"></i>
+        </li>
+        <li>
+          <i class="bx bx-store-alt"></i>
+        </li>
+        <li>
+          <i class="bx bx-map"></i>
+        </li>
+      </ul>
+      <img src="../../../assets//images/kedarnath.jpg" alt="Kedarnath">
+      <div class="con-text">
+        <h2>{{data.Name}}</h2>
+        <p>{{data.Description}}
+        <button [routerLink]="['/package-description']">See More</button>
+      </p>
+      </div>
+    </div>
+  </div>
+</mat-card>
